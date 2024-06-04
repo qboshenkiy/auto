@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.wrapper{
+    width: 1350px;
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    left: 0;
+    top: 0;
+    gap: 50px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.856);
+}
+.title-logo{
+    color: rgb(63, 63, 255);
+}
+.nav-ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+}
+.nav-a{
+    color: #333333;
+    text-decoration: none;
+}
+.nav-a:hover{
+    color: black;
+}
+.decoration{
+    color: rgb(250, 93, 93);
+}
+.cards{
+    display: flex;
+    padding: 50px;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 50px;
+}
+.card:hover{
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+.card{
+    transition: 0.3s;
+    display: block;
+    position: relative;
+    width: 400px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.img-card{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.buy-text{
+    background-color: rgb(63, 63, 255);
+    width: 120px;
+    padding: 5px;
+    position: absolute;
+    top: 270px;
+    left: 20px;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.box-text-card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+}
+.weight{
+    font-weight: 400;
+}
+.title-card{
+    color: #0f0f0f;
+}
+.text-card{
+    color: #333333;
+    font-weight: 700;
+}
+footer{
+    background-color: #1d1d1d;
+    color: white;
+    padding: 40px;
+}
+.footer-text{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+#info{
+    padding: 20px;
+    color: white;
+    margin-top: 50px;
+    background-color: #333333;
+    width: 100%;
+}
+.text-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1 class="title-logo">
+          <span class="decoration">AUTO</span>PARK<span class="decoration"
+            >.</span
+          >KG
+        </h1>
+        <ul class="nav-ul">
+          <li class="nav-li"><a href="#" class="nav-a">Главная</a></li>
+          <li class="nav-li"><a href="#info" class="nav-a">Условия проката</a></li>
+          <li class="nav-li"><a href="#auto" class="nav-a">Прокат</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="auto">
+        <div class="wrapper">
+          <div class="cards">
+            {% for a in auto %}
+            <div class="card">
+              <img src="{{a.image.url}}" alt="" class="img-card" />
+              <div class="buy">
+                <p class="buy-text">{{a.price}}</p>
+              </div>
+              <div class="box-text-card">
+                <h3 class="title-card">{{a.name}}</h3>
+                <p class="text-card">
+                  Мест: <span class="weight">{{a.count}}</span> Год:
+                  <span class="weight">{{a.year}}</span>
+                </p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+      <section id="info">
+        <div class="wrapper">
+          <div class="text-box">
+            <h1 class="title1">Условия аренды авто:</h1>
+            <pre class="text1">
+                    -Необходимые документы: права и паспорт.
+                    -Возраст от 21-65 лет. Возможно так же расширение страховки до 75 лет за дополнительную плату от 100$-150$, зависит от модели авто.
+                    -Минимальный стаж вождения 2 года.
+                    -Залог за авто 300-700$ в зависимомти от модели авто (в любой валюте)
+                    -Среднесуточный лимит по пробегу 300км. Пробег суммируется на весь период аренды. Превышение 0.35$/км.
+                    -Территория эксплуатации – Кыргызская Республика. Пересечение границ запрещено или по согласованию с Арендодателем!
+                    -В случае поломки авто, техподдержка осуществляет ремонт, в случае невозможности ремонта-замена авто.
+                    -Страховка ОСАГО КАСКО включена в стоимость аренды. Франшиза 500$ (в случае вашей вины в ДТП)
+                </pre
+            >
+            <h1 class="title1">ДЛЯ БРОНИРОВАНИЯ НЕОБХОДИМО :</h1>
+            <pre class="text1">
+                Выбрать авто на сайте autopark.kg
+                Сделать запрос на WhatsApp +996 555 85-85-85 или +996 505 85-85-85
+                Если авто доступно, перевести предоплату (~100$) для бронирования.
+                В случае отмены бронирования по инициативе арендатора, предоплата не возвращается.
+              </pre
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="footer-text">Сделала студентка 3 курса</p>
+    </footer>
+  </body>
+</html>
